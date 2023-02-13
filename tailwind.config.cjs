@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#0d0d0d',
-        secondary: '#3c4659'
+        secondary: '#5e6d8c'
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif']

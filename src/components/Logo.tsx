@@ -4,7 +4,7 @@ import styles from '../style';
 
 const Logo: FC = () => {
   return (
-    <Link className={`${styles.flexCenter} gap-2 z-50`} to="/">
+    <Link className={`${styles.flexCenter} gap-2 z-20`} to="/">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -30,7 +30,9 @@ const Logo: FC = () => {
           fill="url(#g1)"
         />
       </svg>
-      <h1 className="font-inter font-bold text-xl text-gradient">rrreydan</h1>
+      <h1 className="font-inter font-bold text-xl text-gradient hidden sm:block">
+        rrreydan
+      </h1>
     </Link>
   );
 };

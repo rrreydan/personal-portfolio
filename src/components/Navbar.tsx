@@ -1,11 +1,11 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { navLinks } from '../constants';
 import styles from '../style';
 
-import Logo from './Logo';
 import close from '../assets/icons/close.svg';
 import menu from '../assets/icons/menu.svg';
+import Logo from './Logo';
 
 const Navbar: FC = () => {
   const [toggle, setToggle] = useState<boolean>(false); // Determines whether the sidebar is displayed
@@ -15,7 +15,7 @@ const Navbar: FC = () => {
   };
 
   return (
-    <div className={`${styles.paddingX} ${styles.flexCenter} `}>
+    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <nav className="w-full flex py-6 justify-between items-center navbar">
           <Logo />
@@ -35,14 +35,14 @@ const Navbar: FC = () => {
             <img
               src={toggle ? close : menu}
               alt="Menu"
-              className="w-[28px] h-[28px] object-contain z-50"
+              className="w-[28px] h-[28px] object-contain z-20"
               onClick={changeToggle}
             />
 
             <div
               className={`${
                 toggle ? 'sidebar-active' : 'sidebar-not-active'
-              } flex fixed h-screen top-0 left-0 right-0 bottom-0 bg-primary overflow-y-auto justify-center items-center -z-50`}
+              } flex fixed h-screen top-0 left-0 right-0 bottom-0 bg-primary overflow-y-auto justify-center items-center z-10`}
             >
               <ul className="flex flex-col justify-end items-center flex-1 gap-28">
                 {navLinks.map(navLink => (
