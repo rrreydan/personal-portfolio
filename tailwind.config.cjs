@@ -9,7 +9,8 @@ module.exports = {
         secondary: '#5e6d8c'
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif']
+        inter: ['Inter', 'sans-serif'],
+        jbMono: ['JetBrains Mono NL', 'monospace', '"Courier New"', 'Consolas']
       }
     }
   },
