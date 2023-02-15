@@ -3,7 +3,7 @@ import MacOsIcons from './MacOsIcons';
 
 const CodeBlock: FC = () => {
   return (
-    <div className="py-[10px] px-4 rounded-[10px] bg-primary/40 backdrop-blur-lg my-auto shadow-2xl shadow-secondary/30 w-full max-h-[400px]">
+    <div className="py-[10px] px-4 rounded-[10px] bg-primary/40 backdrop-blur-lg my-auto shadow-[0_0_35px_5px] sm:shadow-[0_0_70px_5px] sm:shadow-secondary/30 shadow-secondary/30 hover:shadow-secondary/40 transition-shadow w-full max-h-[400px]">
       <MacOsIcons />
       <div className="flex items-center text-white font-jbMono sm:text-[32px] text-[12px]">
         <div>

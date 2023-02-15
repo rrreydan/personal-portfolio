@@ -161,8 +161,8 @@ body.preload * {
   border-right: 1px solid;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 2s 1s steps(30, end) forwards,
-    cursor 0.5s 3s step-end infinite alternate;
+  animation: typing 2s 1.5s steps(30, end) forwards,
+    cursor 0.5s 3.5s step-end infinite alternate;
 }
 
 @keyframes cursor {
@@ -177,5 +177,58 @@ body.preload * {
   }
   to {
     width: 100%;
+  }
+}
+
+/* Appearance animation */
+.avatar {
+  opacity: 0;
+  animation: appearance 2s 2.5s forwards;
+}
+
+.bio {
+  opacity: 0;
+  animation: appearance 2s 3.5s forwards;
+}
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Orbit animation */
+.orbit {
+  border: 2px #3c4659 solid;
+  border-radius: 100%;
+  -webkit-animation: spin-right 20s linear infinite;
+  animation: spin-right 20s linear infinite;
+}
+
+.orbiter {
+  position: absolute;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }

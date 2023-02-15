@@ -12,6 +12,13 @@ const Navbar: FC = () => {
 
   const changeToggle = () => {
     setToggle(prev => !prev);
+
+    if (toggle === false) {
+      document.body.style.overflow = 'hidden';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      document.body.style.overflow = 'visible';
+    }
   };
 
   return (
@@ -42,7 +49,7 @@ const Navbar: FC = () => {
             <div
               className={`${
                 toggle ? 'sidebar-active' : 'sidebar-not-active'
-              } flex fixed h-screen top-0 left-0 right-0 bottom-0 bg-primary overflow-y-auto justify-center items-center z-10`}
+              } flex fixed h-screen top-0 left-0 right-0 bottom-0 bg-primary justify-center items-center z-10`}
             >
               <ul className="flex flex-col justify-end items-center flex-1 gap-28">
                 {navLinks.map(navLink => (
