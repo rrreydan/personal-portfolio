@@ -22,7 +22,9 @@ const Navbar: FC = () => {
   };
 
   return (
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+    <div
+      className={`${styles.paddingX} ${styles.flexCenter} absolute w-full z-10`}
+    >
       <div className={`${styles.boxWidth}`}>
         <nav className="w-full flex py-6 justify-between items-center navbar">
           <Logo />

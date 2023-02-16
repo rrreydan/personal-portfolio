@@ -130,24 +130,44 @@ body.preload * {
   }
 }
 
-/* Hero bg gradient animation */
+/* Hero bg */
 
 .hero {
-  background: linear-gradient(-45deg, #0d0d0d, #100f26, #492456);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background: url('./assets/img/bg.jpg') center;
+  background-size: 125%;
+  background-position: 50% 50%;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
+@media only screen and (max-width: 1024px) {
+  .hero {
+    background: url('./assets/img/bg.jpg') center;
+    background-size: cover;
+    background-position: 50% 50%;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+}
+
+/* Glow in code block */
+
+.code-block::before {
+  background: radial-gradient(
+    900px circle at var(--mouse-x) var(--mouse-y),
+    rgba(94, 109, 140, 0.1),
+    transparent 40%
+  );
+  border-radius: inherit;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.code-block:hover::before {
+  opacity: 1;
 }
 
 /* Typing animation for code block */
@@ -181,14 +201,8 @@ body.preload * {
 }
 
 /* Appearance animation */
-.avatar {
-  opacity: 0;
-  animation: appearance 2s 2.5s forwards;
-}
-
-.bio {
-  opacity: 0;
-  animation: appearance 2s 3.5s forwards;
+.appearance {
+  animation: appearance 1s 0.5s forwards !important;
 }
 
 @keyframes appearance {
