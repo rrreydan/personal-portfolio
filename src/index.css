@@ -130,22 +130,6 @@ body.preload * {
   }
 }
 
-/* Hero bg */
-
-.hero {
-  background: url('./assets/img/bg.jpg') center;
-  background-size: 125%;
-  background-position: 50% 50%;
-}
-
-@media only screen and (max-width: 1024px) {
-  .hero {
-    background: url('./assets/img/bg.jpg') center;
-    background-size: cover;
-    background-position: 50% 50%;
-  }
-}
-
 /* Glow in code block */
 
 .code-block::before {
@@ -154,6 +138,7 @@ body.preload * {
     rgba(94, 109, 140, 0.1),
     transparent 40%
   );
+  color: #070612;
   border-radius: inherit;
   content: '';
   height: 100%;
@@ -202,7 +187,7 @@ body.preload * {
 
 /* Appearance animation */
 .appearance {
-  animation: appearance 1s 0.5s forwards !important;
+  animation: appearance 0.5s 0.25s forwards !important;
 }
 
 @keyframes appearance {

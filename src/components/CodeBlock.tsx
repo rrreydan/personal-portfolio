@@ -15,11 +15,11 @@ const CodeBlock: FC = () => {
 
   return (
     <div
-      className="code-block relative py-[10px] px-4 rounded-[10px] bg-primary/40 backdrop-blur-md my-auto shadow-[0_0_35px_5px] sm:shadow-[0_0_70px_5px] w-full max-h-[400px]"
+      className="code-block relative py-[10px] px-4 rounded-[10px] bg-primary/40 backdrop-blur-md my-auto shadow-[0_0_35px_5px] xl:shadow-[0_0_70px_5px] w-full max-h-[400px]"
       onMouseMove={handleOnMouseMove}
     >
       <MacOsIcons />
-      <div className="flex items-center text-white font-jbMono sm:text-[32px] text-[12px]">
+      <div className="flex items-center text-white font-jbMono xl:text-[32px] text-[12px]">
         <div>
           <div>
             <span className="text-[#c678dd]">import</span> {'{ '}
