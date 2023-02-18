@@ -131,7 +131,6 @@ body.preload * {
 }
 
 /* Glow in code block */
-
 .code-block::before {
   background: radial-gradient(
     900px circle at var(--mouse-x) var(--mouse-y),
@@ -156,7 +155,6 @@ body.preload * {
 }
 
 /* Typing animation for code block */
-
 .text-typing-animation {
   display: inline-block;
 }

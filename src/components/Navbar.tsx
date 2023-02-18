@@ -7,22 +7,21 @@ import close from '../assets/icons/close.svg';
 import menu from '../assets/icons/menu.svg';
 import Logo from './Logo';
 
-const Navbar: FC = () => {
+interface NavbarProps {
+  getSidebarToggle: (toggle: boolean) => void;
+}
+
+const Navbar: FC<NavbarProps> = ({ getSidebarToggle }) => {
   const [toggle, setToggle] = useState<boolean>(false); // Determines whether the sidebar is displayed
 
   const changeToggle = () => {
     setToggle(prev => !prev);
-
-    if (toggle === false) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'visible';
-    }
+    getSidebarToggle(toggle);
   };
 
   return (
     <div
-      className={`${styles.paddingX} ${styles.flexCenter} absolute w-full z-10`}
+      className={`${styles.paddingX} ${styles.flexCenter} absolute top-0 left-0 w-full`}
     >
       <div className={`${styles.boxWidth}`}>
         <nav className="w-full flex py-6 justify-between items-center navbar">

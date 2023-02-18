@@ -12,7 +12,6 @@ const AboutMe: FC = () => {
     const observer = new IntersectionObserver(entries => {
       const entry = entries[0];
       setIsVisible(entry.isIntersecting);
-      console.log(isVisible);
     });
 
     if (ref.current !== null) {
@@ -21,7 +20,7 @@ const AboutMe: FC = () => {
   }, []);
 
   return (
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+    <div className={`${styles.paddingX} ${styles.flexCenter} w-full`}>
       <div className={`${styles.boxWidth}`}>
         <section className="lg:py-28 py-12">
           <div
@@ -46,7 +45,7 @@ const AboutMe: FC = () => {
               <h1 className="flex-1 font-inter font-semibold xl:text-[72px] lg:text-[62px] text-[40px] text-white">
                 About <span className="text-gradient">me</span>
               </h1>
-              <div className="flex-1 font-inter xl:text-[24px] lg:text-[19px] text-[14px] text-secondary max-w-[700px]">
+              <div className="flex-1 font-inter xl:text-[24px] lg:text-[19px] text-[14px] text-secondary w-full">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
                 facere. Facere exercitationem mollitia, sapiente beatae quas
                 expedita vero dolorum est quam voluptate soluta qui eaque

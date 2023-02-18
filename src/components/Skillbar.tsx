@@ -14,7 +14,6 @@ const Skillbar: FC<SkillbarProps> = ({ title, percents }) => {
     const observer = new IntersectionObserver(entries => {
       const entry = entries[0];
       setIsVisible(entry.isIntersecting);
-      console.log(isVisible);
     });
 
     if (ref.current !== null) {
@@ -23,7 +22,7 @@ const Skillbar: FC<SkillbarProps> = ({ title, percents }) => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-3 w-[225px] md:w-[300px] lg:w-[350px] xl:w-[500px]">
+    <div className="flex flex-col gap-3 w-full">
       <div className="flex justify-between items-center">
         <h1>{title}</h1>
         <h1>{percents}%</h1>

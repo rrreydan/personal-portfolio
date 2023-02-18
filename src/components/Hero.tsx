@@ -5,8 +5,7 @@ import CodeBlock from './CodeBlock';
 const Hero: FC = () => {
   return (
     <div
-      className={`hero bg-primary min-h-screen ${styles.flexStart} items-center`}
-      id="parallax"
+      className={`bg-[url('./src/assets/img/bg.svg')] bg-cover bg-top min-h-screen ${styles.flexStart} items-center`}
     >
       <div className={`${styles.boxWidth}`}>
         <div
@@ -21,7 +20,7 @@ const Hero: FC = () => {
                 <br className="lg:block hidden" />{' '}
                 <span className="text-gradient">Andrey</span>
                 <br />{' '}
-                <div className="mt-3 lg:mt-7 xl:text-[52px] lg:text-[42px] text-[20px] text-secondary">
+                <div className="mt-3 lg:mt-7 xl:text-[52px] lg:text-[42px] text-[20px] font-medium">
                   a frontend developer <br className="lg:block hidden" />
                   with passion for learning and creating.
                 </div>
