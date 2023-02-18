@@ -231,3 +231,17 @@ body.preload * {
     transform: rotate(360deg);
   }
 }
+
+/* Skillbar completion animation */
+.skillbar {
+  animation: skillbar-completion 2s 0.25s ease-out forwards !important;
+}
+
+@keyframes skillbar-completion {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

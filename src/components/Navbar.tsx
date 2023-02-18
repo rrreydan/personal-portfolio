@@ -15,7 +15,6 @@ const Navbar: FC = () => {
 
     if (toggle === false) {
       document.body.style.overflow = 'hidden';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       document.body.style.overflow = 'visible';
     }

@@ -1,8 +1,8 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { FC } from 'react';
-import bg from '../assets/img/bg.jpg';
 import AboutMe from '../components/AboutMe';
 import Hero from '../components/Hero';
+import Skills from '../components/Skills';
 
 const Home: FC = () => {
   return (
@@ -25,16 +25,17 @@ const Home: FC = () => {
         </ParallaxLayer>
 
         <ParallaxLayer
+          className="flex items-center justify-center"
           offset={0.9}
           factor={2}
           speed={0.5}
           style={{
-            backgroundImage: `url(${bg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            background: '#0d0d0d',
             zIndex: '-1'
           }}
-        ></ParallaxLayer>
+        >
+          <Skills />
+        </ParallaxLayer>
       </Parallax>
     </div>
   );
