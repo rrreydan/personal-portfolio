@@ -1,23 +1,13 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useRef } from 'react';
 import styles from '../style';
 
 import exampleAvatar from '../assets/img/example_avatar.jpg';
+import useVisibility from '../hooks/useVisibility';
+import Button from './Button';
 
 const AboutMe: FC = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  // Tracking the appearance of an element on the screen to play the animation
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      const entry = entries[0];
-      setIsVisible(entry.isIntersecting);
-    });
-
-    if (ref.current !== null) {
-      observer.observe(ref.current);
-    }
-  }, []);
+  const isVisible = useVisibility(ref);
 
   return (
     <div className={`${styles.paddingX} ${styles.flexCenter} w-full`}>
@@ -55,6 +45,7 @@ const AboutMe: FC = () => {
                 cupiditate voluptatem molestias et labore laudantium fugiat,
                 tempora voluptates.
               </div>
+              <Button title="My projects" href="/projects" />
             </div>
           </div>
         </section>

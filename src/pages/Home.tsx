@@ -19,7 +19,7 @@ const Home: FC = () => {
     <Parallax
       ref={parallax}
       id="parallax"
-      pages={4}
+      pages={2}
       style={{
         background: '#0d0d0d',
         overflow: `${!sidebarToggle ? 'hidden' : 'hidden scroll'}`

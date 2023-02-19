@@ -1,4 +1,5 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useRef } from 'react';
+import useVisibility from '../hooks/useVisibility';
 
 interface SkillbarProps {
   title: string;
@@ -7,19 +8,7 @@ interface SkillbarProps {
 
 const Skillbar: FC<SkillbarProps> = ({ title, percents }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  // Tracking the appearance of an element on the screen to play the animation
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      const entry = entries[0];
-      setIsVisible(entry.isIntersecting);
-    });
-
-    if (ref.current !== null) {
-      observer.observe(ref.current);
-    }
-  }, []);
+  const isVisible = useVisibility(ref);
 
   return (
     <div className="flex flex-col gap-3 w-full">
