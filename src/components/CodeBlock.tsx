@@ -19,7 +19,7 @@ const CodeBlock: FC = () => {
       onMouseMove={handleOnMouseMove}
     >
       <MacOsIcons />
-      <div className="flex items-center text-white font-jbMono xl:text-[32px] lg:text-[16px] text-[12px]">
+      <div className="flex items-center text-white font-jbMono xl:text-[32px] md:text-[16px] text-[12px]">
         <div>
           <div>
             <span className="text-[#c678dd]">import</span> {'{ '}

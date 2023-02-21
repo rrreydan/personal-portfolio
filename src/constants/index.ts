@@ -1,5 +1,3 @@
-import { mdiGithub, mdiInstagram } from '@mdi/js';
-
 // Navbar buttons
 export const navLinks = [
   { id: 1, title: 'Home', href: '/' },
@@ -22,20 +20,4 @@ export const skills = [
   { id: 6, title: 'Java', percents: 60 },
   { id: 7, title: 'Python', percents: 40 },
   { id: 8, title: 'SQL (PostgreSQL)', percents: 20 }
-];
-
-// Links
-export const links = [
-  {
-    id: 1,
-    title: '@rrreydan',
-    href: 'https://instagram.com/rrreydan',
-    icon: mdiInstagram
-  },
-  {
-    id: 2,
-    title: '@rrreydan',
-    href: 'https://github.com/rrreydan',
-    icon: mdiGithub
-  }
 ];
